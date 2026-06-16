@@ -1,0 +1,25 @@
+@mixin container {
+    width: max(1200px, 92%);
+    margin-inline: auto;
+}
+
+@mixin sectionSpacing {
+    padding: 120px 0;
+}
+
+@mixin hoverLift {
+    transition: transform .25s ease, background .25s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+
+@mixin mobile { @media ( max-width: 768px ) { @content; } }

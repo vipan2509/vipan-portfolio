@@ -1,0 +1,13 @@
+@use "../../styles/variables" as *;
+
+.section {
+    padding: 140px 0;
+    scroll-margin-top: 80px;
+}
+
+.heading {
+    margin-bottom: 40px;
+    color: $accent;
+    font-size: 14px;
+    letter-spacing: 2px;
+}

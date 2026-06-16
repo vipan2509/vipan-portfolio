@@ -1,0 +1,20 @@
+@use "../../styles/variables" as *;
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: flex-end;
+  z-index: 9999000;
+  margin-top: 0;
+}
+
+.link {
+  color: #ffffff;
+  transition: 0.3s;
+
+  &:hover {
+    color: $accent;
+    transform: translateX(8px);
+  }
+}

@@ -1,0 +1,24 @@
+@use "../../styles/variables" as *;
+
+.sidebar {
+  top: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+@media (max-width: 1024px) {
+  .sidebar {
+    position: relative;
+    height: auto;
+    padding: 80px 0;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar__title {
+    font-size: 52px;
+  }
+}
