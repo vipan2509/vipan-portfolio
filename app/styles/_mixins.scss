@@ -1,25 +1,30 @@
-@mixin container {
-    width: max(1200px, 92%);
-    margin-inline: auto;
+@use 'variables' as *;
+
+/**
+ * A reusable mixin for creating custom-styled scrollbars in WebKit browsers.
+ * It accepts parameters to customize the appearance.
+ */
+@mixin custom-scrollbar(
+  $size: 7px,
+  $color: $primary,
+  $thumb-radius: 4px,
+  $shadow: 0 0 1px rgba(255, 255, 255, 0.5),
+  $track-color: transparent
+) {
+  // This is a non-standard, WebKit-specific enhancement for a more branded feel.
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $track-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: $thumb-radius;
+    background-color: $color;
+    box-shadow: $shadow;
+  }
 }
-
-@mixin sectionSpacing {
-    padding: 120px 0;
-}
-
-@mixin hoverLift {
-    transition: transform .25s ease, background .25s ease;
-
-    &:hover {
-        transform: translateY(-6px);
-    }
-}
-
-@mixin tablet {
-    @media (max-width: 1024px) {
-        @content;
-    }
-}
-
-
-@mixin mobile { @media ( max-width: 768px ) { @content; } }

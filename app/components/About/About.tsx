@@ -1,22 +1,30 @@
 import Section from "../Section/Section";
 import MotionReveal from "../MotionReveal/MotionReveal";
+import { aboutData } from "../../lib/data";
+import styles from "./About.module.scss";
+
 export default function About() {
   return (
-    <Section id="about" title="ABOUT">
-      
-      <MotionReveal>
-        
-        <p>
-        Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
+    <div id="about" title="01. About">
+     
+        <div className={styles.layout}>
+          <div className={styles.left}>
+            <div>
+              {aboutData.paragraphs.map((text, index) => (
+                <p key={index}>{text}</p>
+              ))}
 
-        Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
+              <ul className={styles.skillslist}>
+                {aboutData.skills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
 
-        I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.
+          <div className={styles.right}>&nbsp;</div>
+        </div>
 
-        Here are a few technologies I’ve been working with recently:
-        </p>
-        <ul className="skills-list"><li>JavaScript (ES6+)</li><li>TypeScript</li><li>React</li><li>Eleventy</li><li>Node.js</li><li>WordPress</li></ul>
-      </MotionReveal>
-    </Section>
+    </div>
   );
 }

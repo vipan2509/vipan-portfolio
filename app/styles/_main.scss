@@ -1,0 +1,121 @@
+@use 'variables' as *;
+
+/**
+ * This file contains global styles, site-wide layout rules, and base element styling.
+ * It defines the main container, page wrapper, and other foundational CSS.
+ */
+
+// Base body styles
+body {
+  color: $light-black;
+}
+
+.container {
+  max-width: $break-desktop;
+  margin: 0 auto;
+  padding: 0 55px;
+  box-sizing: border-box;
+  position: relative;
+
+  @media (max-width: $break-wide) {
+    max-width: $break-desktop;
+    padding: 0 55px;
+  }
+
+  @media (max-width: $break-desktop) {
+    max-width: 1152px;
+    padding: 0 20px;
+  }
+
+  @media (max-width: $break-mobile) {
+    padding: 0 16px;
+  }
+}
+
+// wrapper for website
+.page-wrapper {
+  overflow: hidden;
+  margin: 124px auto 0 auto;
+  box-shadow:
+    0 0 4px 0 rgba(0, 0, 0, 0.04),
+    0 8px 16px 0 rgba(0, 0, 0, 0.08);
+  @media (max-width: $break-mobile) {
+    margin-top: 100px;
+  }
+}
+
+// wide screen
+@media (min-width: 1921px) {
+  #app,
+  header,
+  #isi-drawer,
+  .progress-bar {
+    max-width: $break-desktop;
+    margin: 0 auto;
+  }
+  body {
+    background-color: $secondary-200;
+  }
+  .page-wrapper {
+    background-color: $white;
+  }
+}
+
+p + ul {
+  margin-top: 12px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 33px;
+  li::marker {
+    color: $primary;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+main img,
+main svg {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  margin-bottom: $section-spacing;
+}
+
+main a,
+.isi-layout a {
+  color: $primary;
+  text-decoration: underline;
+}
+
+/**
+ * Custom styles for user-selected/highlighted text.
+ * Provides a branded feel for text selection.
+ */
+/* Standard syntax */
+::selection {
+  background-color: $accent-600; /* The highlight color */
+  color: $black; /* The text color when highlighted */
+}
+
+/* Firefox-specific syntax */
+::-moz-selection {
+  background-color: $accent-600;
+  color: $black;
+}
+
+/**
+ * A layout adjustment for wide but short viewports (e.g., standard laptops).
+ * The `zoom` property is a non-standard way to scale the entire page down slightly
+ * to better fit the content vertically.
+ */
+@media (min-width: 1200px) and (max-height: 750px) {
+  body,
+  html {
+    zoom: 0.88;
+  }
+}

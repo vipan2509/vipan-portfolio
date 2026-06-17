@@ -2,8 +2,67 @@
 $bg: #0a192f;
 $panel: #112240;
 $text: #ccd6f6;
-$muted: #8892b0;
-$accent: #64ffda;
+$dark-gray: #8892b0;
 $container: 1200px;
 $transition: .25s ease;
 $muted : #647bff;
+
+// Colors
+$primary: #0597f2;
+$secondary: #a3acb5;
+$accent: #64ffda;
+$visited: #6810d4;
+
+$error: #d72e3c;
+$light-black: #212224;
+$black: #000;
+$white: #fff;
+$light-gray: #f2f2f2;
+$gray: #dfdfdf;
+
+
+// Color Variants
+$primary-100: color-mix(in srgb, $primary, $white 90%);
+$primary-200: color-mix(in srgb, $primary, $white 80%);
+$primary-300: color-mix(in srgb, $primary, $white 70%);
+$primary-400: color-mix(in srgb, $primary, $white 50%);
+$primary-600: color-mix(in srgb, $primary, $black 20%);
+$primary-700: color-mix(in srgb, $primary, $black 40%);
+$primary-800: color-mix(in srgb, $primary, $black 60%);
+$primary-900: color-mix(in srgb, $primary, $black 75%);
+
+$secondary-100: color-mix(in srgb, $secondary, $white 90%);
+$secondary-200: color-mix(in srgb, $secondary, $white 80%);
+$secondary-300: color-mix(in srgb, $secondary, $white 70%);
+$secondary-400: color-mix(in srgb, $secondary, $white 50%);
+$secondary-600: color-mix(in srgb, $secondary, $black 20%);
+$secondary-700: color-mix(in srgb, $secondary, $black 40%);
+$secondary-800: color-mix(in srgb, $secondary, $black 60%);
+$secondary-900: color-mix(in srgb, $secondary, $black 75%);
+
+$accent-100: color-mix(in srgb, $accent, $white 90%);
+$accent-200: color-mix(in srgb, $accent, $white 80%);
+$accent-300: color-mix(in srgb, $accent, $white 70%);
+$accent-400: color-mix(in srgb, $accent, $white 50%);
+$accent-600: color-mix(in srgb, $accent, $black 20%);
+$accent-700: color-mix(in srgb, $accent, $black 40%);
+$accent-800: color-mix(in srgb, $accent, $black 60%);
+$accent-900: color-mix(in srgb, $accent, $black 75%);
+
+$error-200: color-mix(in srgb, $error, $white 80%);
+
+// Font sizing
+$body-font-size: 18px;
+
+// Spacing
+$section-spacing: 48px;
+
+// Breakpoints
+$break-mobile-small: 415px;
+$break-mobile: 768px;
+$break-tablet: 1024px;
+$break-desktop: 1440px;
+$break-wide: 1920px;
+
+// Custom Breakpoints
+$break-mobile-menu: 1185px;

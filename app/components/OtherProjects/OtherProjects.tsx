@@ -21,7 +21,7 @@ export default function OtherProjects() {
   };
 
   return (
-    <section className="otherProjects" id="otherProjects">
+    <section className="otherProjects" id="projects">
       <h2 className="otherProjects__title">Other Projects</h2>
 
       <div className="otherProjects__grid">

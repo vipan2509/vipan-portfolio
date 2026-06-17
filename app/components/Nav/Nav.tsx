@@ -1,13 +1,15 @@
 import "./Nav.scss";
 import { profile, nav } from "../../lib/data";
+import { li } from "framer-motion/client";
 
 export default function Sidebar() {
   return (
     <nav className="nav">
       {nav.map((item) => (
-        <a key={item} href={`#${item}`} className="link">
-          {item}
-        </a>
+        <li className="link"> 
+           <a key={item} href={`#${item}`} >
+               {item}
+           </a></li>
       ))}
     </nav>
   );

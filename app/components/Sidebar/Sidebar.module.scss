@@ -2,23 +2,46 @@
 
 .sidebar {
   top: 0;
-  height: 100vh;
+  height: 88vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
 
-
-
-@media (max-width: 1024px) {
-  .sidebar {
+  @media (max-width: $break-tablet) {
     position: relative;
     height: auto;
     padding: 80px 0;
   }
-}
-@media (max-width: 768px) {
-  .sidebar__title {
-    font-size: 52px;
+
+  h2, h3 {
+     font-size: clamp(40px, 8vw, 80px);
+     line-height: 120%;
+  }
+
+  h2 {
+    color: $text;
+  }
+
+  h3 {
+    color: $dark-gray;
+  }
+
+  &__eyebrow {
+    font-size: 16px;
+    color: $accent;
+  }
+
+  &__title {
+    font-size: clamp(40px, 8vw, 80px);
+    line-height: 120%;
+  }
+
+  &__role {
+    font-size: 24px;
+  }
+
+  &__intro {
+    margin-top: 16px;
+    max-width: 500px;
   }
 }

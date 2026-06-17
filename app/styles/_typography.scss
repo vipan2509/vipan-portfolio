@@ -1,0 +1,95 @@
+@use 'variables' as *;
+
+/**
+ * This file contains utility classes for consistent spacing, layout, and responsive visibility.
+ * These classes are designed to be used directly in HTML to apply specific, single-purpose styles.
+ *
+ * The `!important` flag is used deliberately on these utilities to ensure they have the highest
+ * specificity and can override component-level styles when needed. This is a common and
+ * accepted practice for utility-first CSS frameworks.
+ */
+
+// ==========================================================================
+// # Spacing
+// Based on a 4px grid system.
+// ==========================================================================
+$spacing-unit: 4px;
+$spacings: (
+  '0': 0,
+  '1': $spacing-unit,
+  '2': $spacing-unit * 2,
+  // 8px
+  '3': $spacing-unit * 3,
+  // 12px
+  '4': $spacing-unit * 4,
+  // 16px
+  '5': $spacing-unit * 6,
+  // 24px
+  '6': $spacing-unit * 8,
+  // 32px
+  '7': $spacing-unit * 12,
+  // 48px
+  '8': $spacing-unit * 16, // 64px
+);
+
+/**
+ * Generates margin (m) and padding (p) utility classes based on the $spacings map.
+ * Creates classes for all sides (e.g., `m-4`), top (e.g., `mt-2`), and bottom (e.g., `pb-6`).
+ */
+@each $prop, $prefix in (margin: 'm', padding: 'p') {
+  @each $key, $value in $spacings {
+    .#{$prefix}-#{$key} {
+      #{$prop}: $value !important;
+    }
+    .#{$prefix}t-#{$key} {
+      #{$prop}-top: $value !important;
+    }
+    .#{$prefix}b-#{$key} {
+      #{$prop}-bottom: $value !important;
+    }
+  }
+}
+
+// ==========================================================================
+// # Layout & Sizing
+// ==========================================================================
+
+.d-flex {
+  display: flex !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+.w-100 {
+  width: 100% !important;
+}
+
+// ==========================================================================
+// # Responsive Visibility
+// ==========================================================================
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: $break-mobile) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+}

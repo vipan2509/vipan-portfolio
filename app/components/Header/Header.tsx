@@ -5,7 +5,10 @@ export default function Header() {
   return (
     <header className="header">
       <a href="#">Logo</a>  
-      <Nav />
+      <div className="right-col">
+        <Nav />
+      <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Btn</a>
+      </div>
     </header>
   );
 }

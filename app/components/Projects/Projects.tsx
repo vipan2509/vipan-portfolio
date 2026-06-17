@@ -4,9 +4,10 @@ import "./Projects.scss";
 import {projects} from "../../lib/data"
 
 
+
 export default function Projects() {
   return (
-    <section className="projects" id="projects">
+    <section className="projects" id="work">
       <h2 className="heading">
         03. Some Things I've Built
       </h2>

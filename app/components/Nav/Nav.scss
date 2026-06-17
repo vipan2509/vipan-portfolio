@@ -3,18 +3,47 @@
 .nav {
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: 30px;
   justify-content: flex-end;
   z-index: 9999000;
   margin-top: 0;
+  counter-reset: item;
+  list-style: none;
+  padding: 0;
+
+  .link {
+    color: #ffffff;
+    transition: 0.3s;
+    position: relative;
+    padding-left: 20px;
+    font-size: 15px;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      text-decoration-skip-ink: auto;
+      color: #ccd6f6;
+      position: relative;
+      counter-increment: item;
+      text-transform: capitalize;
+      letter-spacing: .5px;
+
+      &:hover {
+        color: $accent;
+        transform: translateX(2px);
 }
-
-.link {
-  color: #ffffff;
-  transition: 0.3s;
-
-  &:hover {
-    color: $accent;
-    transform: translateX(8px);
+        &::before {
+          position: absolute;
+          content: counter(item, decimal-leading-zero);
+          margin-right: 5px;
+          color: $accent;
+          font-size: 15px;
+          text-align: right;
+          left: -25px;
+        }
+      
+    }
   }
+
+
 }

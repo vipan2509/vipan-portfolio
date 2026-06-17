@@ -8,7 +8,7 @@ export default function Experience() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="experience" id="experience">
+    <section className="experience" id="experience" title="02. Experience">
 
       <div className="tabs">
         {companies.map((item, index) => (
