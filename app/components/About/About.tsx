@@ -2,11 +2,12 @@ import Section from "../Section/Section";
 import MotionReveal from "../MotionReveal/MotionReveal";
 import { aboutData } from "../../lib/data";
 import styles from "./About.module.scss";
+import Eyebrow from "../Eyebrow/Eyebrow";
 
 export default function About() {
   return (
-    <div id="about" title="01. About">
-     
+    <section id="about" className={styles.aboutSection}>
+        <Eyebrow number="01." name="Title" ></Eyebrow>
         <div className={styles.layout}>
           <div className={styles.left}>
             <div>
@@ -14,7 +15,7 @@ export default function About() {
                 <p key={index}>{text}</p>
               ))}
 
-              <ul className={styles.skillslist}>
+              <ul className="skillslist">
                 {aboutData.skills.map((skill) => (
                   <li key={skill}>{skill}</li>
                 ))}
@@ -25,6 +26,6 @@ export default function About() {
           <div className={styles.right}>&nbsp;</div>
         </div>
 
-    </div>
+    </section>
   );
 }

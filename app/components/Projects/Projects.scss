@@ -1,26 +1,18 @@
 .projects {
-  max-width: 1200px;
-
   width: 100%;
-
   margin: auto;
-
   padding: 100px 24px;
 }
 
 .heading {
   font-size: clamp(28px, 5vw, 42px);
-
   margin-bottom: 80px;
 }
 
 .project {
   display: flex;
-
   align-items: center;
-
   position: relative;
-
   margin-bottom: 180px;
 }
 
@@ -29,104 +21,74 @@
 
   .project__content {
     left: 0;
-
     right: auto;
-
     align-items: flex-start;
-
     text-align: left;
   }
 }
 
 .project__image {
   width: 65%;
-
   border-radius: 8px;
-
   overflow: hidden;
 
   img {
     width: 100%;
-
     display: block;
-
     object-fit: cover;
-
     transition:
       transform .5s ease,
       opacity .4s ease;
-
     opacity: .6;
   }
 
   &:hover img {
     transform: scale(1.04);
-
     opacity: 1;
   }
 }
 
 .project__content {
   width: 50%;
-
   position: absolute;
-
   right: 0;
-
   z-index: 2;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: flex-end;
-
   text-align: right;
 
   span {
     color: #64ffda;
-
     font-size: 14px;
   }
 
   h3 {
     font-size: clamp(26px, 4vw, 42px);
-
     margin: 12px 0 24px;
   }
 }
 
 .card {
   background: #112240;
-
   padding: 28px;
-
   border-radius: 6px;
-
   line-height: 1.8;
-
   width: 100%;
 }
 
 .stack {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 16px;
-
   list-style: none;
-
   margin-top: 24px;
-
   padding: 0;
 }
 
 .actions {
   display: flex;
-
   gap: 16px;
-
   margin-top: 24px;
 }
 
@@ -152,9 +114,7 @@
   .project,
   .project.reverse {
     flex-direction: column;
-
     margin-bottom: 90px;
-
     gap: 24px;
   }
 
@@ -164,17 +124,11 @@
 
   .project__content {
     position: relative;
-
     width: 100%;
-
     right: auto;
-
     left: auto;
-
     align-items: flex-start;
-
     text-align: left;
-
     margin-top: -60px;
   }
 

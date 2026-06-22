@@ -2,12 +2,13 @@
 
 import "./Projects.scss";
 import {projects} from "../../lib/data"
-
-
+import Eyebrow from "../Eyebrow/Eyebrow";
+import Image from "next/image";
 
 export default function Projects() {
   return (
     <section className="projects" id="work">
+       <Eyebrow number="03." name="Title" ></Eyebrow>
       <h2 className="heading">
         03. Some Things I've Built
       </h2>
@@ -20,9 +21,12 @@ export default function Projects() {
           }`}
         >
           <div className="project__image">
-            <img
+            <Image
+              key={project.title}
               src={project.image}
               alt={project.title}
+              width={100}
+              height={300}
             />
           </div>
 

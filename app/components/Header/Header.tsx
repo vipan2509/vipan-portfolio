@@ -7,7 +7,7 @@ export default function Header() {
       <a href="#">Logo</a>  
       <div className="right-col">
         <Nav />
-      <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Btn</a>
+      <a className="resume-button desktop-only" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Btn</a>
       </div>
     </header>
   );

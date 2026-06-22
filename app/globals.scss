@@ -11,7 +11,7 @@ body {
   color: $dark-gray;
   // font-family: "Fira Code", monospace;
   font-family: "Quicksand", sans-serif;
-  line-height: 1.7;
+  line-height: 140%;
   min-height: 100vh;
 }
 
@@ -45,3 +45,29 @@ a {
   }
 }
 
+
+.skillslist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  gap: 0px 10px;
+  li {
+    position: relative;
+
+    &::marker {
+      display: none;
+      color: transparent;
+    }
+
+    &::before {
+      content: "";
+      width: 3px;
+      height: 3px;
+      position: absolute;
+      top: 9px;
+      left: -18px;
+      border-top: 1px solid $accent;
+      border-right: 1px solid $accent;
+      transform: rotate(45deg);
+    }
+  }
+}

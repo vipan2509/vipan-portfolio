@@ -1,5 +1,6 @@
 import styles from "./Sidebar.module.scss";
 import { profile} from "../../lib/data";
+
 export default function Sidebar() {
   return (
     <aside className={styles.sidebar}>

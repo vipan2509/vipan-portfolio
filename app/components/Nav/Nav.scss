@@ -1,5 +1,12 @@
 @use "../../styles/variables" as *;
 
+/* Hide mobile elements on desktop */
+.menuButton,
+.resume,
+.overlay {
+  display: none;
+}
+
 .nav {
   display: flex;
   flex-direction: row;
@@ -27,23 +34,107 @@
       counter-increment: item;
       text-transform: capitalize;
       letter-spacing: .5px;
+      transition: .3s;
 
       &:hover {
         color: $accent;
         transform: translateX(2px);
+      }
+
+      &::before {
+        position: absolute;
+        content: counter(item, decimal-leading-zero);
+        left: -25px;
+        color: $accent;
+        font-size: 15px;
+        text-align: right;
+      }
+    }
+  }
 }
+
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+
+  .menuButton {
+    display: block;
+    position: fixed;
+    top: 26px;
+    right: 20px;
+    z-index: 99999;
+    border: none;
+    background: transparent;
+    color: $accent;
+    font-size: 34px;
+    cursor: pointer;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .35);
+    z-index: 9998;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(75vw, 320px);
+    height: 100vh;
+    background: #112240;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    transition: right .35s ease;
+    z-index: 9999;
+
+    &.open {
+      right: 0;
+    }
+
+    .link {
+      padding-left: 0;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        font-size: 28px;
+        color: #ccd6f6;
+
         &::before {
-          position: absolute;
-          content: counter(item, decimal-leading-zero);
-          margin-right: 5px;
+          position: static;
+          display: block;
           color: $accent;
-          font-size: 15px;
-          text-align: right;
-          left: -25px;
+          margin-bottom: 8px;
+          font-size: 18px;
         }
-      
+
+        &:hover {
+          transform: none;
+        }
+      }
     }
   }
 
+  .resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 56px;
+    border: 1px solid $accent;
+    border-radius: 6px;
+    color: $accent;
+    text-decoration: none;
+    transition: .3s;
 
+    &:hover {
+      background: rgba(100, 255, 218, .08);
+    }
+  }
 }

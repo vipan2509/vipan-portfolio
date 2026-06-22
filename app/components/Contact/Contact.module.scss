@@ -1,0 +1,76 @@
+@use "../../styles/variables" as *;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.eyebrow {
+  color: $accent;
+  font-size: 16px;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: clamp(48px, 8vw, 72px);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: #ccd6f6;
+}
+
+.text {
+  color: $muted;
+  line-height: 1.8;
+  font-size: 18px;
+  max-width: 560px;
+  margin-bottom: 60px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  height: 60px;
+  padding: 0 32px;
+  border: 1px solid $accent;
+  border-radius: 6px;
+  color: $accent;
+  text-decoration: none;
+  transition:
+    transform .25s ease,
+    background .25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    background: rgba(100, 255, 218, .08);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact {
+    min-height: auto;
+    padding: 80px 20px;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 220px;
+  }
+}

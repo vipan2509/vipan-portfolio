@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 // Define types for your data structures to catch errors early in your components
 export type NavItem = "about" | "experience" | "work" | "projects" | "contact";
 
@@ -12,13 +14,14 @@ export interface WorkExperience {
   period: string;
   role: string;
   company: string;
-  desc: string;
+  desc: string[];
+  listing: string[];
 }
 
 export interface FeaturedProject {
   title: string;
   type: string;
-  image: string;
+  image: StaticImageData;
   desc: string;
   tech: string[];
 }
@@ -59,54 +62,75 @@ export const aboutData = {
   ]
 };
 
-export const experience: WorkExperience[] = [
-  {
-    period: "2024 — Present",
-    role: "Senior Frontend Engineer",
-    company: "Acme Labs",
-    desc: "Leading frontend systems.",
-  },
-  {
-    period: "2022 — 2024",
-    role: "UI Engineer",
-    company: "Pixel Studio",
-    desc: "Designed scalable interfaces.",
-  },
-];
+// export const experience: WorkExperience[] = [
+//   {
+//     period: "2024 — Present",
+//     role: "Senior Frontend Engineer",
+//     company: "Acme Labs",
+//     desc: "Leading frontend systems.",
+//   },
+//   {
+//     period: "2022 — 2024",
+//     role: "UI Engineer",
+//     company: "Pixel Studio",
+//     desc: "Designed scalable interfaces.",
+//   },
+// ];
 
 export const companies: WorkExperience[] = [
   {
     company: "Company 1",
     role: "Frontend Developer",
     period: "2024 — Present",
-    desc: "Building modern UI and improving performance.",
+    desc: ["Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more", "Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements", "Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders", "Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship", ],
+    listing : ["1", "2", ],
   },
   {
     company: "Company 2",
     role: "UI Developer",
     period: "2022 — 2024",
-    desc: "Worked on reusable components and accessibility.",
+    desc: ["one", "Two"],
+    listing : ["3", "4", ],
   },
   {
     company: "Company 3",
     role: "Web Developer",
     period: "2020 — 2022",
-    desc: "Created responsive websites and landing pages.",
+    desc: ["one", "Two"],
+    listing : [],
+  },
+   {
+    company: "Company 4",
+    role: "Web Developer",
+    period: "2020 — 2022",
+    desc: ["one", "Two"],
+    listing : [],
+  },
+   {
+    company: "Company 5",
+    role: "Web Developer",
+    period: "2020 — 2022",
+     desc: ["one", "Two"],
+    listing : [],
   },
 ];
+
+import oneImage from "../assets/one.jpg";
+import twoImage from "../assets/two.jpg";
+import threeImage from "../assets/three.jpg";
 
 export const projects: FeaturedProject[] = [
   {
     title: "Halcyon Theme",
     type: "Featured Project",
-    image: "/projects/project-1.jpg",
+    image: oneImage,
     desc: "A minimal dark blue theme for VS Code, Sublime Text and more.",
     tech: ["React", "Next.js", "SCSS"],
   },
   {
     title: "Spotify Profile",
     type: "Featured Project",
-    image: "/projects/project-2.jpg",
+    image: twoImage,
     desc: "Visualize personalized Spotify data and playlists.",
     tech: ["React", "Spotify API", "Express"],
   },
