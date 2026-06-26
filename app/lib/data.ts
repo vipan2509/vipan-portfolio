@@ -161,18 +161,18 @@ import threeImage from "../assets/three.jpg";
 
 export const projects: FeaturedProject[] = [
   {
-    title: "Halcyon Theme",
+    title: "Dummy text",
     type: "Featured Project",
     image: oneImage,
-    desc: "A minimal dark blue theme for VS Code, Sublime Text and more.",
+    desc: "simply dummy text of the printing and typesetting.",
     tech: ["React", "Next.js", "SCSS"],
   },
   {
-    title: "Spotify Profile",
+    title: "Dummy text",
     type: "Featured Project",
     image: twoImage,
-    desc: "Visualize personalized Spotify data and playlists.",
-    tech: ["React", "Spotify API", "Express"],
+    desc: "simply dummy text of the printing and typesetting.",
+    tech: ["React", "Next.js", "Express"],
   },
 ];
 
