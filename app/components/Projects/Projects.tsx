@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function Projects() {
   return (
     <section className="projects" id="work">
-       <Eyebrow number="03." name="Title" ></Eyebrow>
+       <Eyebrow number="03." name="Some Things I’ve Built" ></Eyebrow>
       <h2 className="heading">
         03. Some Things I've Built
       </h2>

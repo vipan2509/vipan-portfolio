@@ -10,7 +10,7 @@ export default function Experience() {
 
   return (
     <section className={styles.experiencelayout} id="experience">
-      <Eyebrow number="02." name="Title" />
+      <Eyebrow number="02." name="Where I’ve Worked" />
 
       <div className={styles.experience}>
         <div className={styles.tabs}>
@@ -35,13 +35,24 @@ export default function Experience() {
         </div>
 
         <div key={active} className={styles.content}>
-          <h3>{companies[active].role}</h3>
+          <h3>
+            {companies[active].role}{" "}
+            <a
+              href={companies[active].companyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {companies[active].company}
+            </a>
+          </h3>
 
           <span className={styles.period}>{companies[active].period}</span>
 
-          <div className={styles.desc}>{companies[active].desc.map((item, index) => (
+          <div className={styles.desc}>
+            {companies[active].desc.map((item, index) => (
               <p key={index}>{item}</p>
-            ))}</div>
+            ))}
+          </div>
 
           <ul className="skillslist">
             {companies[active].listing.map((item, index) => (

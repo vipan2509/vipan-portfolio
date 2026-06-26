@@ -16,6 +16,7 @@ export interface WorkExperience {
   company: string;
   desc: string[];
   listing: string[];
+  companyUrl?: string;
 }
 
 export interface FeaturedProject {
@@ -31,6 +32,7 @@ export interface OtherProject {
   desc: string;
   tech: string[];
   link: string;
+  github: string;
 }
 
 // --- Data Exports ---
@@ -38,80 +40,118 @@ export interface OtherProject {
 export const nav: NavItem[] = ["about", "experience", "work", "projects", "contact"];
 
 export const profile: Profile = {
-  eyebrow: "eyebrow",
-  name: "Lorem Ipsum.",
-  title: "Dummy text of the printing",
-  intro: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966",
+  eyebrow: "Hi, my name is",
+  name: "Vipan K.",
+  title: "I build things for the web.",
+  intro: "Senior Frontend Developer | React.js | Next.js | Vue.js | JavaScript",
 };
 
 export const aboutData = {
   paragraphs: [
-    "Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!",
-    "Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.",
-    "I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.",
-    "Here are a few technologies I’ve been working with recently:"
+    "Senior Frontend Developer with 10+ years of experience designing and delivering scalable, high-performance web applications and responsive HTML email solutions. Experienced in developing modern frontend applications using React.js, Next.js, Vue.js, JavaScript (ES6+), TypeScript, HTML5, CSS3, SCSS, Tailwind CSS, and Redux Toolkit.",
+    "Strong expertise in translating Figma designs into pixel-perfect, responsive, and accessible user interfaces while ensuring cross-browser compatibility, SEO optimization, and exceptional performance. Experienced working in Agile environments, integrating REST APIs, developing reusable UI components, and collaborating with cross-functional teams to deliver enterprise-grade digital solutions.",
+    "Passionate about writing clean, maintainable code and creating intuitive user experiences that balance performance, accessibility, and visual excellence.",
   ],
 
   skills: [
     "JavaScript (ES6+)",
-    "TypeScript",
+    "Vue.js",
     "React",
-    "Eleventy",
-    "Node.js",
-    "WordPress"
+    "GSAP",
+    "HTML / LESS / SCSS",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Redux Toolkit",
+    "REST APIs",
+    "Responsive Design",
+    "SEO Optimization",
+    "Cross-Browser Compatibility",
+    "Email Development (Acid / Litmus)",
+    "Git",
+    "GitHub",
+    "Bitbucket",
+    "Jira",
+    "Postman"
   ]
 };
 
-// export const experience: WorkExperience[] = [
-//   {
-//     period: "2024 — Present",
-//     role: "Senior Frontend Engineer",
-//     company: "Acme Labs",
-//     desc: "Leading frontend systems.",
-//   },
-//   {
-//     period: "2022 — 2024",
-//     role: "UI Engineer",
-//     company: "Pixel Studio",
-//     desc: "Designed scalable interfaces.",
-//   },
-// ];
-
 export const companies: WorkExperience[] = [
   {
-    company: "Company 1",
-    role: "Frontend Developer",
-    period: "2024 — Present",
-    desc: ["Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more", "Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements", "Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders", "Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship", ],
-    listing : ["1", "2", ],
+    company: "TMotions Global Limited",
+    companyUrl: "https://www.tmotions.com/",
+    role: "Senior Frontend Developer",
+    period: "Jun 2019 — Present",
+    desc: [
+      "Develop web applications using React.js and Vue.js.",
+      "Build responsive HTML email templates and test them using Litmus and Email on Acid.",
+      "Create animated banners using HTML, SCSS, CSS, and JavaScript.",
+      "Convert Figma designs into responsive, pixel-perfect web pages.",
+      "Work closely with designers, QA, and developers to deliver high-quality projects.",
+      "Fix bugs, improve website performance, and ensure cross-browser compatibility.",
+      "Successfully delivered 500+ projects, including websites, landing pages, HTML emails, and digital marketing assets for healthcare and pharmaceutical clients."
+    ],
+    listing : ["React.js", "Vue.js", "SCSS", "JavaScript", "HTML", "CSS"],
   },
   {
-    company: "Company 2",
-    role: "UI Developer",
-    period: "2022 — 2024",
-    desc: ["one", "Two"],
-    listing : ["3", "4", ],
+    company: "Cardant Holdings Ltd.",
+    companyUrl: "http://www.cardant.com/",
+    role: "UI Developer | Frontend Developer",
+    period: "Sep 2018 — Jun 2019",
+    desc: [
+      "Built responsive and user-friendly interfaces based on UI/UX designs.", 
+      "Collaborated with backend developers to integrate RESTful APIs.",
+      "Participated in code reviews and contributed to team knowledge sharing.",
+      "Developed and maintained reusable UI components and libraries.",
+      "Optimized web applications for maximum speed and scalability.",
+      "Ensured cross-browser compatibility and adherence to web standards.",
+      "Worked in an Agile environment, attending daily stand-ups and sprint planning meetings."
+    ],
+    listing : ["HTML", "CSS", "JavaScript", "Vue.js"],
   },
   {
-    company: "Company 3",
-    role: "Web Developer",
-    period: "2020 — 2022",
-    desc: ["one", "Two"],
-    listing : [],
+    company: "Hash Software, Mohali",
+    companyUrl: "https://www.hashsoftware.com/",
+    role: "Sr. Web Developer | Designer",
+    period: "Mar 2015 — Sep 2018",
+    desc: [
+      "Designed website mockups in Adobe Photoshop, Figma, XD based on client requirements.",
+      "Presented designs to clients and made changes based on their feedback until final approval.",
+      "Converted approved Photoshop designs into responsive websites using HTML, CSS, JavaScript, and jQuery.",
+      "Built pixel-perfect, mobile-friendly web pages with cross-browser compatibility.",
+      "Worked closely with clients and the development team to deliver projects on time.",
+      "Maintained and updated existing websites based on client requirements."
+    ],
+    listing : ["Adobe Photoshop", "Figma", "Adobe XD", "HTML", "CSS", "JavaScript", "jQuery"],
   },
    {
-    company: "Company 4",
+    company: "cWebConsultants now webgarh",
+    companyUrl: "https://webgarh.com/",
     role: "Web Developer",
-    period: "2020 — 2022",
-    desc: ["one", "Two"],
-    listing : [],
+    period: "2013 — 2015",
+    desc: [
+      "Designed website mockups in Adobe Photoshop based on client requirements.",
+      "Presented designs to clients, gathered feedback, and updated designs until final approval.",
+      "Converted approved Photoshop designs into responsive websites using HTML, CSS, JavaScript, and jQuery.",
+      "Built pixel-perfect, mobile-friendly websites with cross-browser compatibility.",
+      "Maintained and updated client websites based on business requirements.",
+      "Worked closely with clients and the development team to deliver projects on time."
+    ],
+    listing : ["HTML", "CSS", "JavaScript"],
   },
    {
-    company: "Company 5",
-    role: "Web Developer",
-    period: "2020 — 2022",
-     desc: ["one", "Two"],
-    listing : [],
+    company: "IQGQ Coachimgs",
+    companyUrl: "#",
+    role: "Graphic Design Intern",
+    period: "2011 — 2013",
+    desc: [
+      "Designed banners, brochures, flyers, and promotional materials.",
+      "Created print and digital advertisements using Adobe Photoshop and CorelDRAW.",
+      "Assisted in designing marketing materials for online and offline campaigns.",
+      "Updated designs based on feedback from the team.",
+      "Learned graphic design principles and delivered creative assets within deadlines."
+    ],
+    listing : ["Adobe Photoshop", "Adobe Illustrator", "InDesign"],
   },
 ];
 
@@ -138,57 +178,25 @@ export const projects: FeaturedProject[] = [
 
 export const otherProjects: OtherProject[] = [
   {
-    title: "Project One",
-    desc: "Short description about project.",
-    tech: ["React", "SCSS"],
-    link: "https://github.com",
+    title: "K9 Cover",
+    desc: "Designed and developed a responsive website for a dog insurance company.",
+    tech: ["Figma", "HTML", "CSS", "JavaScript"],
+    link: "https://new.k9cover.com/",
+    github: "https://github.com",
   },
   {
-    title: "Project Two",
-    desc: "Built with Next.js.",
-    tech: ["Next.js", "TypeScript"],
-    link: "https://vercel.com",
+    title: "Just BE | Real Estate",
+    desc: "Built with .net core responsive website for real estate company.",
+    tech: ["Figma", "HTML", "CSS", "JavaScript", ".NET Core"],
+    link: "https://www.justbere.com/",
+    github: "https://github.com",
   },
   {
-    title: "Project Three",
-    desc: "Node API project.",
-    tech: ["Node", "Express"],
-    link: "https://nodejs.org",
+    title: "Top Dog Cover",
+    desc: "Designed and developed a responsive website for a dog insurance company.",
+    tech: ["Figma", "HTML", "CSS", "JavaScript"],
+    link: "https://topdogcover.com/",
+    github: "https://github.com", 
   },
-  {
-    title: "Project Four",
-    desc: "Firebase integration.",
-    tech: ["Vue", "Firebase"],
-    link: "https://firebase.google.com",
-  },
-  {
-    title: "Project Five",
-    desc: "Portfolio project.",
-    tech: ["React", "API"],
-    link: "https://github.com",
-  },
-  {
-    title: "Project Six",
-    desc: "Responsive website.",
-    tech: ["JS", "SCSS"],
-    link: "https://example.com",
-  },
-  {
-    title: "Project Seven",
-    desc: "Additional project.",
-    tech: ["React"],
-    link: "https://example.com",
-  },
-  {
-    title: "Project Eight",
-    desc: "Additional project.",
-    tech: ["Next.js"],
-    link: "https://example.com",
-  },
-  {
-    title: "Project Nine",
-    desc: "Additional project.",
-    tech: ["MongoDB"],
-    link: "https://example.com",
-  },
+  
 ];

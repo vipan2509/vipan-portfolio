@@ -7,7 +7,7 @@ import Eyebrow from "../Eyebrow/Eyebrow";
 export default function About() {
   return (
     <section id="about" className={styles.aboutSection}>
-        <Eyebrow number="01." name="Title" ></Eyebrow>
+        <Eyebrow number="01." name="About Me" ></Eyebrow>
         <div className={styles.layout}>
           <div className={styles.left}>
             <div>
