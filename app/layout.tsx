@@ -1,7 +1,7 @@
 import "./globals.scss";
 
 export const metadata = {
-  title: "John Doe",
+  title: "Vipan Kumar | Frontend Portfolio",
   description:
     "Frontend Portfolio",
 };
